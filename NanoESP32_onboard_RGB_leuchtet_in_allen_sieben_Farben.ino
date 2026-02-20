@@ -6,6 +6,9 @@
 #define ledGruen 15
 //blaue LED - D16
 #define ledBlau 16
+
+leuchtdauer = 3000;
+
 void setup() {
   Serial.begin(9600);
   pinMode(ledBoard, OUTPUT);
@@ -24,47 +27,47 @@ void loop() {
   delay(1000);
   Serial.println("\ngelbe Board-LED");
   digitalWrite(ledBoard, HIGH);
-  delay(3000);
+  delay(leuchtdauer);
   digitalWrite(ledBoard, LOW);
 
   Serial.println("Rot");
   digitalWrite(ledRot, LOW);
-  delay(3000);
+  delay(leuchtdauer);
   digitalWrite(ledRot, HIGH);
 
   Serial.println("Gruen");
   digitalWrite(ledGruen, LOW);
-  delay(3000);
+  delay(leuchtdauer);
   digitalWrite(ledGruen, HIGH);
 
   Serial.println("Gelb");
   digitalWrite(ledRot, LOW);
   digitalWrite(ledBlau, HIGH);
   digitalWrite(ledGruen, LOW);
-  delay(3000);
+  delay(leuchtdauer);
   alleLEDaus();
 
   Serial.println("Blau");
   digitalWrite(ledBlau, LOW);
-  delay(3000);
+  delay(leuchtdauer);
   digitalWrite(ledBlau, HIGH);
 
   Serial.println("Weiss");
   digitalWrite(ledRot, LOW);
   digitalWrite(ledBlau, LOW);
   digitalWrite(ledGruen, LOW);
-  delay(3000);
+  delay(leuchtdauer);
 
   Serial.println("Lila");
   digitalWrite(ledRot, LOW);
   digitalWrite(ledBlau, LOW);
   digitalWrite(ledGruen, HIGH);
-  delay(3000);
+  delay(leuchtdauer);
 
   Serial.println("Tuerkis\n");
   digitalWrite(ledRot, HIGH);
   digitalWrite(ledBlau, LOW);
   digitalWrite(ledGruen, LOW);
-  delay(3000);
+  delay(leuchtdauer);
   alleLEDaus();
 }
